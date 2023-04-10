@@ -1,9 +1,85 @@
-import React from 'react'
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+
+import { styles } from "../styles";
+import { EarthCanvas } from "./canvas";
+import { slideIn } from "../utils/motion";
+import SectionWrapper from "../hoc/SectionWrapper";
 
 const Contact = () => {
-  return (
-    <div>Contact</div>
-  )
-}
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-export default Contact
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {};
+  const handleSubmit = (e) => {};
+
+  return (
+    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+      >
+        <p className={styles.sectionSubText}>Get in touch</p>
+        <h3 className={styles.sectionHeadText}>Contact.</h3>
+
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="flex flex-col mt-12 gap-8"
+        >
+          <label htmlFor="" className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Name</span>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              placeholder="What's your name?"
+              onChange={handleChange}
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium border-none"
+            />
+          </label>
+
+          <label htmlFor="" className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Email</span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              placeholder="What's your email?"
+              onChange={handleChange}
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium border-none"
+            />
+          </label>
+
+          <label htmlFor="" className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Message</span>
+            <textarea
+              rows={7}
+              name="message"
+              value={form.message}
+              placeholder="Type your message here"
+              onChange={handleChange}
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium border-none"
+            />
+          </label>
+
+          <button
+            type="submit"
+            className="py-3 px-8 bg-tertiary w-fit text-white outline-none shadow-md font-bold shadow-primary rounded-xl"
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
+        </form>
+      </motion.div>
+    </div>
+  );
+};
+
+export default SectionWrapper(Contact, "contact");
