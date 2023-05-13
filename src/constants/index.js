@@ -1,8 +1,8 @@
 import {
   mobile,
   backend,
-  creator,
-  web,
+  react,
+  // web,
   javascript,
   typescript,
   html,
@@ -19,9 +19,10 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  airbnb,
+  dashboard,
+  promptopia,
+  starwars,
   threejs,
 } from "../assets";
 
@@ -43,7 +44,7 @@ export const navLinks = [
 const services = [
   {
     title: "Web Developer",
-    icon: web,
+    icon: react,
   },
   {
     title: "React Native Developer",
@@ -53,10 +54,10 @@ const services = [
     title: "Backend Developer",
     icon: backend,
   },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
+  // {
+  //   title: "Content Creator",
+  //   icon: creator,
+  // },
 ];
 
 const technologies = [
@@ -198,12 +199,34 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Admin Dashboard",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based admin dashboard that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
         name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mui",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nivoCharts",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dashboard,
+    source_code_link: "https://github.com/Ase020/react-admin-panel-nivo-mui",
+    live_link: "https://asedesign-dashboard.netlify.app",
+  },
+  {
+    name: "Incite Prompts",
+    description:
+      "Airbnb clone that enables users to search for apartments and hotels, and book them for a stay based on their different locations.",
+    tags: [
+      {
+        name: "next.js",
         color: "blue-text-gradient",
       },
       {
@@ -211,54 +234,91 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "tailwindcss",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: promptopia,
+    source_code_link:
+      "https://github.com/Ase020/next13_fullstack_share_prompts",
+    live_link: "https://next13-fullstack-share-prompts.vercel.app/",
   },
   {
-    name: "Job IT",
+    name: "Airbnb 2.0",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Airbnb clone that enables users to search for apartments and hotels, and book them for a stay based on their different locations.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "next.js",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "tailwindcss",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: airbnb,
+    source_code_link: "https://github.com/Ase020/airbnb-nextjs-app",
+    live_link: "https://airbnb-nextjs-app.vercel.app",
   },
   {
-    name: "Trip Guide",
+    name: "JobSearch",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive StarWars platform that allows users to browse the franchise's films, characters, and planets, and offers the ability to add and search info to the database.",
     tags: [
       {
-        name: "nextjs",
+        name: "react-native",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "javascript",
         color: "green-text-gradient",
+      },
+
+      {
+        name: "api",
+        color: "pink-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: starwars,
+    source_code_link: "https://github.com/Ase020/react-native-job-search-app",
+    live_link:
+      "https://expo.dev/accounts/felixase/projects/react-native-jobs/builds/895cace6-e428-4c4b-8a3f-5effde68f5bb",
+  },
+  {
+    name: "Star Wars",
+    description:
+      "A comprehensive StarWars platform that allows users to browse the franchise's films, characters, and planets, and offers the ability to add and search info to the database.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+
+      {
+        name: "api",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+    ],
+    image: starwars,
+    source_code_link: "https://github.com/Ase020/star-wars-universe",
+    live_link: "https://ase020.github.io/star-wars-universe",
   },
 ];
 

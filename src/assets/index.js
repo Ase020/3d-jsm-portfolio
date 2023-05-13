@@ -1,9 +1,10 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
+import backend from "./node.png";
+import react from "./react.png";
+import mobile from "./reactNative.png";
 import web from "./web.png";
 import github from "./github.png";
+import eye from "./eye.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -27,16 +28,19 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import promptopia from "./promptopia.png";
+import starwars from "./starwars.png";
+import dashboard from "./dashboard.png";
+import airbnb from "./airbnb.png";
 
 export {
   logo,
   backend,
-  creator,
+  // creator,
   mobile,
   web,
   github,
+  eye,
   menu,
   close,
   css,
@@ -57,6 +61,9 @@ export {
   starbucks,
   tesla,
   carrent,
-  jobit,
-  tripguide,
+  airbnb,
+  dashboard,
+  promptopia,
+  starwars,
+  react,
 };

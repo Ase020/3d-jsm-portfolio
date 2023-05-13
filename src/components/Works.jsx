@@ -3,7 +3,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, eye } from "../assets";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
@@ -15,6 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -33,7 +34,16 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
+          <div className="card-img_hover absolute inset-0 m-3 flex justify-between">
+            <div
+              className="w-10 h-10 bg-slate-400 cursor-pointer flex justify-center items-center rounded-full"
+              onClick={() => {
+                window.open(live_link, "_blank");
+              }}
+            >
+              <img src={eye} alt="eye" className="w-1/2 h-1/2 object-contain" />
+            </div>
+
             <div
               className="w-10 h-10 black-gradient cursor-pointer flex justify-center items-center rounded-full"
               onClick={() => {
